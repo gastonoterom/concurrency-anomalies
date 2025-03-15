@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_concurrency_anomalies
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5438:5432"
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo_concurrency_anomalies
+    ports:
+      - "27018:27017"
